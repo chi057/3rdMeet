@@ -24,5 +24,14 @@ namespace _3rdMeet
         {
             InitializeComponent();
         }
+
+        private void TxtCM_KeyUp(object sender, KeyEventArgs e)
+        {
+            double douCM;
+
+            douCM = Convert.ToDouble(txtCM.Text);
+
+            txtM.Text = string.Format("{0:0.##########}", douCM / 100);
+        }
     }
 }
