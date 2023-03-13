@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_3rdMeet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="430.8" Width="567.2">
     <Grid>
-        
+        <Button Content="清除" HorizontalAlignment="Left" Height="48" Margin="89,42,0,0" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="89,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="227,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="374,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="89,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="227,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="374,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88"/>
+        <TextBox HorizontalAlignment="Left" Height="47" Margin="89,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"/>
+        <Label Content="公分" HorizontalAlignment="Left" Height="26" Margin="89,99,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="公尺" HorizontalAlignment="Left" Height="26" Margin="227,99,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="公里" HorizontalAlignment="Left" Height="26" Margin="374,99,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="英吋" HorizontalAlignment="Left" Height="26" Margin="89,190,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="英呎" HorizontalAlignment="Left" Height="26" Margin="227,190,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="碼" HorizontalAlignment="Left" Height="26" Margin="374,190,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="說明文字" HorizontalAlignment="Left" Height="26" Margin="89,281,0,0" VerticalAlignment="Top" Width="64"/>
+
     </Grid>
 </Window>
