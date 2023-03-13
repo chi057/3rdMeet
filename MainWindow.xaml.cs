@@ -37,8 +37,32 @@ namespace _3rdMeet
             txtFt.Text = string.Format("{0:0.##########}", douCM / 30.48);
             txtYard.Text = string.Format("{0:0.##########}", douCM / 91.44);
         }
-
         private void TxtCM_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TxtM_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TxtKM_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TxtIn_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TxtFt_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TxtYard_KeyUp(object sender, KeyEventArgs e)
         {
 
         }
