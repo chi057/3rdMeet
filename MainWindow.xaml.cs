@@ -32,6 +32,15 @@ namespace _3rdMeet
             douCM = Convert.ToDouble(txtCM.Text);
 
             txtM.Text = string.Format("{0:0.##########}", douCM / 100);
+            txtKM.Text = string.Format("{0:0.##########}", douCM / 100000);
+            txtIn.Text = string.Format("{0:0.##########}", douCM / 2.54);
+            txtFt.Text = string.Format("{0:0.##########}", douCM / 30.48);
+            txtYard.Text = string.Format("{0:0.##########}", douCM / 91.44);
+        }
+
+        private void TxtCM_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
