@@ -27,9 +27,7 @@ namespace _3rdMeet
 
         private void TxtCM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douCM;
-
-            douCM = Convert.ToDouble(txtCM.Text);
+            double douCM = Convert.ToDouble(txtCM.Text);
 
             txtM.Text = string.Format("{0:0.##########}", douCM / 100);
             txtKM.Text = string.Format("{0:0.##########}", douCM / 100000);
@@ -44,8 +42,7 @@ namespace _3rdMeet
 
         private void TxtM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douM;
-            douM = Convert.ToDouble(txtM.Text);
+            double douM = Convert.ToDouble(txtM.Text);
 
             txtCM.Text = string.Format("{0:0.##########}", douM * 100);
             txtKM.Text = string.Format("{0:0.##########}", douM * 0.001);
@@ -56,8 +53,7 @@ namespace _3rdMeet
 
         private void TxtKM_KeyUp(object sender, KeyEventArgs e)
         {
-            double douKM;
-            douKM = Convert.ToDouble(txtKM.Text);
+            double douKM = Convert.ToDouble(txtKM.Text);
 
             txtCM.Text = string.Format("{0:0.##########}", douKM * 100);
             txtM.Text = string.Format("{0:0.##########}", douKM * 1000);
@@ -68,8 +64,7 @@ namespace _3rdMeet
 
         private void TxtIn_KeyUp(object sender, KeyEventArgs e)
         {
-            double douIn;
-            douIn = Convert.ToDouble(txtIn.Text);
+            double douIn = Convert.ToDouble(txtIn.Text);
 
             txtCM.Text = string.Format("{0:0.##########}", douIn * 2.54);
             txtM.Text = string.Format("{0:0.##########}", douIn * 0.0254);
@@ -80,8 +75,7 @@ namespace _3rdMeet
 
         private void TxtFt_KeyUp(object sender, KeyEventArgs e)
         {
-            double douFt;
-            douFt = Convert.ToDouble(txtFt.Text);
+            double douFt = Convert.ToDouble(txtFt.Text);
 
             txtCM.Text = string.Format("{0:0.##########}", douFt * 30.48);
             txtM.Text = string.Format("{0:0.##########}", douFt * 0.3048);
@@ -92,8 +86,7 @@ namespace _3rdMeet
 
         private void TxtYard_KeyUp(object sender, KeyEventArgs e)
         {
-            double douYard;
-            douYard = Convert.ToDouble(txtYard.Text);
+            double douYard = Convert.ToDouble(txtYard.Text);
 
             txtCM.Text = string.Format("{0:0.##########}", douYard * 91.44);
             txtM.Text = string.Format("{0:0.##########}", douYard * 0.9144);
