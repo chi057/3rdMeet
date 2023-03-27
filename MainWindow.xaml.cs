@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace _3rdMeet
 {
     /// <summary>
@@ -26,6 +25,21 @@ namespace _3rdMeet
         }
         string strInput; 
         double douOutput;
+        private void caculateAnswer(int _kind, double _value)
+        {
+            if (_kind != 0)
+                txtCM.Text = string.Format("{0:0.##########}", _value);
+            if (_kind != 1)
+                txtM.Text = string.Format("{0:0.##########}", _value / 100);
+            if (_kind != 2)
+                txtKM.Text = string.Format("{0:0.##########}", _value / 100000);
+            if (_kind != 3)
+                txtIn.Text = string.Format("{0:0.##########}", _value / 2.54);
+            if (_kind != 4)
+                txtFt.Text = string.Format("{0:0.##########}", _value / 30.48);
+            if (_kind != 5)
+                txtYard.Text = string.Format("{0:0.##########}", _value / 91.44);
+        }
         private void BtnAllClear_Click(object sender, RoutedEventArgs e)
         {
             txtCM.Text = "";
@@ -38,15 +52,9 @@ namespace _3rdMeet
         private void TxtCM_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtCM.Text; 
-
-           
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtM.Text = string.Format("{0:0.##########}", douOutput / 100);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput / 100000);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput / 2.54);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput / 30.48);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput / 91.44);
+                caculateAnswer(0, douOutput);
             }
             else
             {
@@ -58,103 +66,70 @@ namespace _3rdMeet
         {
 
         }
-
         private void TxtM_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtM.Text;
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 100);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.001);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 39.37);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3.28);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 1.09);
+                caculateAnswer(1, douOutput * 100);
             }
             else
             {
                 txtInfo.Text = "請輸入數字";
                 txtM.Text = "";
-            }
-      
+            }    
         }
-
         private void TxtKM_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtKM.Text;
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 100000);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 1000);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 39370.1);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3280.84);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 1093.61);
+                caculateAnswer(2, douOutput * 100000);
             }
             else
             {
                 txtInfo.Text = "請輸入數字";
                 txtKM.Text = "";
-            }
- 
+            } 
         }
-
         private void TxtIn_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtIn.Text;
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 2.54);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.0254);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0000254);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 0.0833);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.0278);
+                caculateAnswer(3, douOutput * 2.54);
             }
             else
             {
                 txtInfo.Text = "請輸入數字";
                 txtIn.Text = "";
-            }
-  
+            } 
         }
-
         private void TxtFt_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtFt.Text;
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 30.48);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.3048);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0003048);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 12);
-                txtYard.Text = string.Format("{0:0.##########}", douOutput * 0.3333);
+                caculateAnswer(4, douOutput * 30.48);
             }
             else
             {
                 txtInfo.Text = "請輸入數字";
                 txtFt.Text = "";
-            }
-            
+            }  
         }
-
         private void TxtYard_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtYard.Text;
             if (double.TryParse(strInput, out douOutput) == true)
             {
-                txtCM.Text = string.Format("{0:0.##########}", douOutput * 91.44);
-                txtM.Text = string.Format("{0:0.##########}", douOutput * 0.9144);
-                txtKM.Text = string.Format("{0:0.##########}", douOutput * 0.0009144);
-                txtIn.Text = string.Format("{0:0.##########}", douOutput * 36);
-                txtFt.Text = string.Format("{0:0.##########}", douOutput * 3);
+                caculateAnswer(5, douOutput * 91.44);
             }
             else
             {
                 txtInfo.Text = "請輸入數字";
                 txtYard.Text = "";
-            }
-
-            
+            }  
         }
-
-        
     }
 }
